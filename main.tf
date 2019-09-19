@@ -1,3 +1,14 @@
+terraform {
+  backend "remote" {
+    organization = "manavore"
+
+    workspaces {
+      name = "manak8s"
+    }
+  }
+}
+
+
 provider "digitalocean" {
   token = "${var.do_token}"
 }
