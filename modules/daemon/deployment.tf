@@ -29,13 +29,13 @@ resource "kubernetes_deployment" "generic-deployment" {
 
           dynamic "env" {
             for_each = [for env in var.envs: {
-              name   = env.name
+              name  = env.name
               value = env.value
             }]
 
             content {
-              name           = env.value.name
-              value = env.value.prefix
+              name  = env.value.name
+              value = env.value.value
             }
           }
         }
