@@ -3,6 +3,28 @@
 The daemon module purpose is to create kubernetes deployments that doesn't need to be accessed from the internet.
 For example, a daemon is the appropriate module for a chatbot.
 
+## Example
+
+```
+module "mychatbot" {
+  source = "./modules/daemon"
+
+  name  = "mychatbot"
+  image = "me/chatbot"
+  tag   = "3.1-alpine"
+  envs = [
+    {
+      name  = "DEMO_ENV1"
+      value = "VALUE1"
+    },
+    {
+      name  = "DEMO_ENV2"
+      value = "VALUE2"
+    },
+  ]
+}
+```
+
 ## Variables
 
 | name | type | required | description | example |
