@@ -12,24 +12,21 @@ This repo holds its configuration as code.
 
 ## Usage
 
-See the example [pull request](https://github.com/manavore/manak8s/pull/5)
+You can use native kubernetes provider [ressources](https://www.terraform.io/docs/providers/kubernetes/index.html) or use existing modules.
 
-Also please check the modules readme.
 The current modules are:
 
 | name | purpose | example | wip | readme |
 | ---- | ------- | ------- | --- | ------ |
 | daemon | Long running tasks that don't require to be accessed from the internet. | chatbot | [yes](#6) | [here](https://github.com/manavore/manak8s/blob/develop/terraform/modules/daemon/README.md) |
 
+See the example [pull request](https://github.com/manavore/manak8s/pull/5) using the daemon module.
+
 ## Notes
 
 ### Git
 
-Please use [semantic](https://seesparkbox.com/foundry/semantic_commit_messages) git commit messages.
-
-### Access
-
-For TF cloud, repo, etc. access: just ask on Discord.
+Please use [semantic](https://seesparkbox.com/foundry/semantic_commit_messages) git commit messages or your commits will be squash merged.
 
 ### Secrets
 
