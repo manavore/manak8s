@@ -32,8 +32,9 @@ module "mychatbot" {
 | `name` | string | yes | Name of your deployment/service. | `my-chatbot` |
 | `image` | string | yes | Docker image from docker hub. | `python` |
 | `tag` | string | yes | Docker image tag. | `3-alpine` |
-| `replicas` | number | no | (default: 1) | `2` |
-| `envs` | array of dict | no | (default: []) | see [notes](##notes) |
+| `command` | list | no (default: null) | Overwrite the image ENTRYPOINT. | `["python", "myapp", "-v"]` | 
+| `replicas` | number | no (default: 1) | Number of containers running.  | `2` |
+| `envs` | array of dict | no (default: []) | Environment variables. | see [notes](##notes) |
 
 ## Notes
 
@@ -61,10 +62,14 @@ If you want to use a secret value (api keys, tokens, private keys, etc.) in your
 **Please prefix it with your first name to avoid name collision.**
 
 ```hcl
+variable my_secret_key {}  # you need to declare it but don't set any value
+
+# [...]
+
 envs = [
   {
     name = "MY_SECRET_KEY"
-    value = "${var.ETIENNE_MY_SECRET_KEY}"
+    value = "${var.etienne_my_secret_key}"
   },
 ]
 ```
