@@ -32,7 +32,7 @@ module "mychatbot" {
 | `name` | string | yes | Name of your deployment/service. | `my-chatbot` |
 | `image` | string | yes | Docker image from docker hub. | `python` |
 | `tag` | string | yes | Docker image tag. | `3-alpine` |
-| `command` | string | no (default: null) | Overwrite the image CMD. | `start` | 
+| `command` | list | no (default: null) | Overwrite the image ENTRYPOINT. | `["python", "myapp", "-v"]` | 
 | `replicas` | number | no (default: 1) | Number of containers running.  | `2` |
 | `envs` | array of dict | no (default: []) | Environment variables. | see [notes](##notes) |
 
