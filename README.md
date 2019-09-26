@@ -19,7 +19,7 @@ The current modules are:
 
 | name | purpose | example | wip | readme |
 | ---- | ------- | ------- | --- | ------ |
-| daemon | Long running tasks that don't require to be accessed from the internet. | chatbot | yes | [here](https://github.com/manavore/manak8s/blob/develop/terraform/modules/daemon/README.md) |
+| daemon | Long running tasks that don't require to be accessed from the internet. | chatbot | [yes](#6) | [here](https://github.com/manavore/manak8s/blob/develop/terraform/modules/daemon/README.md) |
 
 ## Notes
 
