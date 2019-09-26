@@ -38,7 +38,7 @@ If you want to use a secret value (api keys, tokens, private keys, etc.) in your
 **Please prefix it with your first name to avoid name collision.**
 
 ```hcl
-variable my_secret_key {}  # you need to declare it but don't set any value
+variable etienne_my_secret_key {}  # you need to declare it but don't set any value
 
 # [...]
 
