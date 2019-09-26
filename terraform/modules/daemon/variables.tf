@@ -10,6 +10,11 @@ variable "tag" {
   type = string
 }
 
+variable "command" {
+  type = string
+  default = ""
+}
+
 variable "replicas" {
   type = number
   default = 1
