@@ -5,7 +5,7 @@ For example, a daemon is the appropriate module for a chatbot.
 
 ## Example
 
-```
+```hcl
 module "mychatbot" {
   source = "./modules/daemon"
 
@@ -41,7 +41,8 @@ module "mychatbot" {
 
 The `envs` variable is an array of dicts.
 You can declare it as follow:
-```hsl
+
+```hcl
 envs = [
   {
     name = "ENV_ONE"
@@ -54,3 +55,16 @@ envs = [
 ]
 ```
 Each dict should contain the `name` and `value` keys.
+
+If you want to use a secret value (api keys, tokens, private keys, etc.) in your tf files, add it [here](https://app.terraform.io/app/manavore/workspaces/manak8s/variables) under the "Environment Variables" and use the HCL variable syntax.
+
+**Please prefix it with your first name to avoid name collision.**
+
+```hcl
+envs = [
+  {
+    name = "MY_SECRET_KEY"
+    value = "${var.ETIENNE_MY_SECRET_KEY}"
+  },
+]
+```
