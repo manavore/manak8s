@@ -1,0 +1,14 @@
+name: Terraform
+on: [pull_request]
+
+jobs:
+  fmt:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - uses: hashicorp/terraform-github-actions/fmt@v0.4.0
+      with:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TF_ACTION_WORKING_DIR: './terraform'
