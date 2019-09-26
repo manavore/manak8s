@@ -24,12 +24,12 @@ resource "kubernetes_deployment" "generic-deployment" {
 
       spec {
         container {
-          image = "${var.image}:${var.tag}"
-          name  = "${var.name}"
+          image   = "${var.image}:${var.tag}"
+          name    = "${var.name}"
           command = "${length(var.command) > 0 ? var.command : null}"
 
           dynamic "env" {
-            for_each = [for env in var.envs: {
+            for_each = [for env in var.envs : {
               name  = env.name
               value = env.value
             }]

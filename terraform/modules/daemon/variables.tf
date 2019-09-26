@@ -11,12 +11,12 @@ variable "tag" {
 }
 
 variable "command" {
-  type = list
+  type    = list
   default = []
 }
 
 variable "replicas" {
-  type = number
+  type    = number
   default = 1
 }
 
@@ -32,6 +32,6 @@ variable "replicas" {
 #   },
 # ]
 variable "envs" {
-  type = list
+  type    = list
   default = []
 }
