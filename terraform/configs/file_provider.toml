@@ -1,3 +1,0 @@
-[http.middlewares]
-  [http.middlewares.force-tls.redirectScheme]
-    scheme = "https"
