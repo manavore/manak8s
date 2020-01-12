@@ -12,15 +12,8 @@ This repo holds its configuration as code.
 
 ## Usage
 
-You can use native kubernetes provider [ressources](https://www.terraform.io/docs/providers/kubernetes/index.html) or use existing modules.
-
-The current modules are:
-
-| name | purpose | example | wip | readme |
-| ---- | ------- | ------- | --- | ------ |
-| daemon | Long running tasks that don't require to be accessed from the internet. | chatbot | [yes](#6) | [here](https://github.com/manavore/manak8s/blob/develop/terraform/modules/daemon/README.md) |
-
-See the example [pull request](https://github.com/manavore/manak8s/pull/5) using the daemon module.
+Please use the native kubernetes provider [ressources](https://www.terraform.io/docs/providers/kubernetes/index.html).
+Create a file prefixed by your firt name for your project and add the necessary ressources.
 
 ## Notes
 
