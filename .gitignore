@@ -1,5 +1,6 @@
 .vscode
 .terraform
+.env
 # Local .terraform directories
 **/.terraform/*
 
